@@ -1,43 +1,247 @@
-window.addEventListener("load", function () {
-    const loader = document.getElementById("loader");
-    if(loader){
-        loader.style.display = "none";
-    }
-});
-
-setTimeout(function(){
-    const loader = document.getElementById("loader");
-    if(loader){
-        loader.style.display = "none";
-    }
-},3000);
-
-function toggleMenu(){
-    document.getElementById("nav").classList.toggle("show");
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,sans-serif;
+scroll-behavior:smooth;
 }
 
-const bookingForm = document.getElementById("bookingForm");
-
-if(bookingForm){
-bookingForm.addEventListener("submit", function(e){
-e.preventDefault();
-alert("Booking Submitted Successfully!");
-this.reset();
-});
+body{
+background:#f5f5f5;
+color:#222;
 }
 
-let reviews = document.querySelectorAll(".review");
-let current = 0;
-
-if(reviews.length > 0){
-setInterval(()=>{
-reviews[current].classList.remove("active");
-current = (current + 1) % reviews.length;
-reviews[current].classList.add("active");
-},3000);
+#loader{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:#fff;
+display:flex;
+justify-content:center;
+align-items:center;
+z-index:9999;
 }
 
-function toggleFaq(el){
-let p = el.nextElementSibling;
-p.style.display = p.style.display === "block" ? "none" : "block";
+.spinner{
+width:55px;
+height:55px;
+border:6px solid #ddd;
+border-top:6px solid green;
+border-radius:50%;
+animation:spin 1s linear infinite;
+}
+
+@keyframes spin{
+100%{transform:rotate(360deg);}
+}
+
+header{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:18px 8%;
+background:#1b5e20;
+position:sticky;
+top:0;
+z-index:999;
+}
+
+.logo{
+font-size:28px;
+font-weight:bold;
+color:#fff;
+}
+
+nav a{
+color:#fff;
+text-decoration:none;
+margin:0 12px;
+font-weight:600;
+}
+
+.menu-btn{
+display:none;
+color:#fff;
+font-size:28px;
+cursor:pointer;
+}
+
+.hero{
+height:100vh;
+background:linear-gradient(rgba(0,0,0,.55),rgba(0,0,0,.55)),
+url('https://images.unsplash.com/photo-1501004318641-b39e6451bec6?auto=format&fit=crop&w=1600&q=80');
+background-size:cover;
+background-position:center;
+display:flex;
+justify-content:center;
+align-items:center;
+text-align:center;
+padding:20px;
+color:#fff;
+}
+
+.hero h1{
+font-size:56px;
+margin-bottom:15px;
+}
+
+.hero p{
+font-size:22px;
+margin-bottom:25px;
+}
+
+.btn{
+display:inline-block;
+padding:14px 28px;
+background:#ff9800;
+color:#fff;
+text-decoration:none;
+border-radius:6px;
+margin:6px;
+}
+
+.green{
+background:#25d366;
+}
+
+section{
+padding:80px 8%;
+}
+
+h2{
+text-align:center;
+font-size:40px;
+margin-bottom:35px;
+}
+
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+gap:25px;
+}
+
+.card{
+background:#fff;
+padding:20px;
+border-radius:10px;
+box-shadow:0 5px 20px rgba(0,0,0,.08);
+text-align:center;
+}
+
+.card img{
+width:100%;
+height:220px;
+object-fit:cover;
+border-radius:8px;
+margin-bottom:12px;
+}
+
+form{
+max-width:500px;
+margin:auto;
+display:flex;
+flex-direction:column;
+gap:15px;
+}
+
+input,select,button{
+padding:14px;
+font-size:16px;
+border-radius:6px;
+border:1px solid #ccc;
+}
+
+button{
+background:#2e7d32;
+color:#fff;
+border:none;
+cursor:pointer;
+}
+
+.review{
+display:none;
+max-width:700px;
+margin:auto;
+background:#fff;
+padding:20px;
+border-radius:10px;
+box-shadow:0 5px 20px rgba(0,0,0,.08);
+text-align:center;
+font-size:22px;
+}
+
+.review.active{
+display:block;
+}
+
+.faq-box{
+background:#fff;
+padding:15px;
+margin:10px 0;
+border-radius:8px;
+}
+
+.faq-box p{
+display:none;
+margin-top:10px;
+}
+
+.contact-links{
+max-width:450px;
+margin:auto;
+display:flex;
+flex-direction:column;
+gap:15px;
+}
+
+.contact-links a{
+background:#fff;
+padding:16px;
+text-decoration:none;
+color:#222;
+border-radius:8px;
+box-shadow:0 5px 20px rgba(0,0,0,.08);
+}
+
+footer{
+background:#1b5e20;
+color:#fff;
+text-align:center;
+padding:20px;
+}
+
+@media(max-width:768px){
+
+nav{
+display:none;
+position:absolute;
+top:70px;
+left:0;
+width:100%;
+background:#1b5e20;
+padding:20px;
+}
+
+nav a{
+display:block;
+margin:12px 0;
+}
+
+nav.show{
+display:block;
+}
+
+.menu-btn{
+display:block;
+}
+
+.hero h1{
+font-size:36px;
+}
+
+h2{
+font-size:30px;
+}
 }
