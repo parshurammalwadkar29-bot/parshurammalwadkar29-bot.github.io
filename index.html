@@ -3,92 +3,164 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Rent Farm Equipments</title>
+<title>FarmRent Pro - Farm Equipment Rental</title>
 <link rel="stylesheet" href="style.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
 
+<div id="loader">
+<div class="spinner"></div>
+</div>
+
 <header>
-    <div class="logo">
-        <i class="fa-solid fa-tractor"></i> FarmRent
-    </div>
+<div class="logo"><i class="fa-solid fa-tractor"></i> FarmRent Pro</div>
 
-    <nav>
-        <a href="#home">Home</a>
-        <a href="#services">Equipments</a>
-        <a href="#about">About</a>
-        <a href="#contact">Contact</a>
-    </nav>
+<nav id="nav">
+<a href="#home">Home</a>
+<a href="#equipments">Equipments</a>
+<a href="#pricing">Pricing</a>
+<a href="#reviews">Reviews</a>
+<a href="#faq">FAQ</a>
+<a href="#contact">Contact</a>
+</nav>
 
-    <a href="#contact" class="btn">Book Now</a>
+<div class="menu-btn" onclick="toggleMenu()">
+<i class="fa fa-bars"></i>
+</div>
 </header>
 
 <section class="hero" id="home">
-    <div class="hero-content">
-        <h1>Reliable Farm Equipment Rentals</h1>
-        <p>Affordable tractors, harvesters, ploughs and more for every farming need.</p>
-        <a href="#services" class="btn">Explore Equipments</a>
-    </div>
+<div class="hero-content">
+<h1>Reliable Farm Equipment Rentals</h1>
+<p>Tractors, Harvesters, Rotavators & More — Affordable Daily Rentals</p>
+
+<div class="hero-buttons">
+<a href="tel:7972609914" class="btn">Call Now</a>
+<a href="https://wa.me/917972609914?text=Hello%20I%20want%20to%20rent%20farm%20equipment" target="_blank" class="btn green">WhatsApp</a>
+</div>
+</div>
 </section>
 
-<section class="services" id="services">
-    <h2>Our Equipments</h2>
+<section class="equipments" id="equipments">
+<h2>Our Equipments</h2>
 
-    <div class="cards">
+<div class="cards">
 
-        <div class="card">
-            <img src="https://images.unsplash.com/photo-1592982537447-6d7d65f0d97b?auto=format&fit=crop&w=800&q=80">
-            <h3>Tractors</h3>
-            <p>Powerful tractors for ploughing and transport work.</p>
-        </div>
+<div class="card">
+<img src="https://images.unsplash.com/photo-1592982537447-6d7d65f0d97b?auto=format&fit=crop&w=900&q=80">
+<h3>Tractor</h3>
+<p>Available Today</p>
+</div>
 
-        <div class="card">
-            <img src="https://images.unsplash.com/photo-1625246333195-78d9c38ad449?auto=format&fit=crop&w=800&q=80">
-            <h3>Harvesters</h3>
-            <p>Modern harvesters for fast crop collection.</p>
-        </div>
+<div class="card">
+<img src="https://images.unsplash.com/photo-1625246333195-78d9c38ad449?auto=format&fit=crop&w=900&q=80">
+<h3>Harvester</h3>
+<p>Booked Tomorrow</p>
+</div>
 
-        <div class="card">
-            <img src="https://images.unsplash.com/photo-1501004318641-b39e6451bec6?auto=format&fit=crop&w=800&q=80">
-            <h3>Plough Machines</h3>
-            <p>Heavy-duty soil preparation tools available.</p>
-        </div>
+<div class="card">
+<img src="https://images.unsplash.com/photo-1501004318641-b39e6451bec6?auto=format&fit=crop&w=900&q=80">
+<h3>Rotavator</h3>
+<p>Available Today</p>
+</div>
 
-    </div>
+</div>
 </section>
 
-<section class="about" id="about">
-    <div class="about-text">
-        <h2>Why Choose Us?</h2>
-        <p>We provide affordable rentals, timely delivery, well-maintained machinery and 24/7 support for farmers.</p>
-        <ul>
-            <li>✔ Affordable Pricing</li>
-            <li>✔ Fast Delivery</li>
-            <li>✔ Quality Machines</li>
-            <li>✔ Trusted Service</li>
-        </ul>
-    </div>
+<section class="pricing" id="pricing">
+<h2>Rental Pricing</h2>
+
+<div class="price-boxes">
+<div class="price-box">
+<h3>Tractor</h3>
+<p>₹2500 / Day</p>
+</div>
+
+<div class="price-box">
+<h3>Harvester</h3>
+<p>₹5000 / Day</p>
+</div>
+
+<div class="price-box">
+<h3>Rotavator</h3>
+<p>₹1800 / Day</p>
+</div>
+</div>
+</section>
+
+<section class="booking">
+<h2>Book Equipment</h2>
+
+<form id="bookingForm">
+<input type="text" placeholder="Your Name" required>
+<input type="date" required>
+
+<select required>
+<option value="">Select Equipment</option>
+<option>Tractor</option>
+<option>Harvester</option>
+<option>Rotavator</option>
+</select>
+
+<select required>
+<option value="">Delivery Area</option>
+<option>Pune</option>
+<option>Mumbai</option>
+<option>Nashik</option>
+</select>
+
+<button type="submit">Book Now</button>
+</form>
+</section>
+
+<section class="reviews" id="reviews">
+<h2>Customer Reviews</h2>
+
+<div class="review-slider">
+<div class="review active">⭐⭐⭐⭐⭐ Excellent service and on time delivery.</div>
+<div class="review">⭐⭐⭐⭐⭐ Tractor condition was very good.</div>
+<div class="review">⭐⭐⭐⭐⭐ Affordable pricing and trusted owner.</div>
+</div>
+</section>
+
+<section class="faq" id="faq">
+<h2>FAQ</h2>
+
+<div class="faq-item">
+<h3 onclick="toggleFaq(this)">How to book equipment?</h3>
+<p>Use booking form or WhatsApp us directly.</p>
+</div>
+
+<div class="faq-item">
+<h3 onclick="toggleFaq(this)">Do you provide delivery?</h3>
+<p>Yes, delivery available in selected areas.</p>
+</div>
+
+<div class="faq-item">
+<h3 onclick="toggleFaq(this)">Payment methods?</h3>
+<p>Cash, UPI, Bank Transfer accepted.</p>
+</div>
 </section>
 
 <section class="contact" id="contact">
-    <h2>Book Equipment</h2>
+<h2>Contact Us</h2>
 
-    <form>
-        <input type="text" placeholder="Your Name" required>
-        <input type="tel" placeholder="Phone Number" required>
-        <select>
-            <option>Select Equipment</option>
-            <option>Tractor</option>
-            <option>Harvester</option>
-            <option>Plough Machine</option>
-        </select>
-        <button type="submit">Submit Booking</button>
-    </form>
+<div class="contact-box">
+<a href="tel:7972609914"><i class="fa fa-phone"></i> 7972609914</a>
+
+<a href="mailto:parshurammalwadkar29@gmail.com?subject=Farm Equipment Rental Inquiry&body=Hello, I want to rent farm equipment. Please share details.">
+<i class="fa fa-envelope"></i> Send Email
+</a>
+
+<a href="https://wa.me/917972609914?text=Hello%20I%20want%20to%20rent%20farm%20equipment" target="_blank">
+<i class="fa-brands fa-whatsapp"></i> WhatsApp
+</a>
+</div>
 </section>
 
 <footer>
-    <p>© 2026 FarmRent | All Rights Reserved</p>
+<p>© 2026 FarmRent Pro | All Rights Reserved</p>
 </footer>
 
 <script src="script.js"></script>
