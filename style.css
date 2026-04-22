@@ -13,8 +13,6 @@ color:#222;
 
 #loader{
 position:fixed;
-top:0;
-left:0;
 width:100%;
 height:100%;
 background:#fff;
@@ -57,7 +55,7 @@ color:#fff;
 nav a{
 color:#fff;
 text-decoration:none;
-margin:0 12px;
+margin:0 10px;
 font-weight:600;
 }
 
@@ -78,33 +76,31 @@ display:flex;
 justify-content:center;
 align-items:center;
 text-align:center;
-padding:20px;
 color:#fff;
+padding:20px;
 }
 
 .hero h1{
 font-size:56px;
-margin-bottom:15px;
 }
 
 .hero p{
 font-size:22px;
-margin-bottom:25px;
+margin:18px 0;
 }
 
 .btn{
 display:inline-block;
-padding:14px 28px;
-background:#ff9800;
+padding:14px 25px;
+border-radius:6px;
 color:#fff;
 text-decoration:none;
-border-radius:6px;
 margin:6px;
+background:#ff9800;
 }
 
-.green{
-background:#25d366;
-}
+.green{background:#25d366;}
+.blue{background:#2196f3;}
 
 section{
 padding:80px 8%;
@@ -128,6 +124,11 @@ padding:20px;
 border-radius:10px;
 box-shadow:0 5px 20px rgba(0,0,0,.08);
 text-align:center;
+transition:.3s;
+}
+
+.card:hover{
+transform:translateY(-8px);
 }
 
 .card img{
@@ -135,11 +136,38 @@ width:100%;
 height:220px;
 object-fit:cover;
 border-radius:8px;
-margin-bottom:12px;
+}
+
+.review{
+display:none;
+max-width:700px;
+margin:auto;
+background:#fff;
+padding:20px;
+border-radius:10px;
+text-align:center;
+font-size:22px;
+box-shadow:0 5px 20px rgba(0,0,0,.08);
+}
+
+.review.active{
+display:block;
+}
+
+.faq-box{
+background:#fff;
+padding:15px;
+margin:10px 0;
+border-radius:8px;
+}
+
+.faq-box p{
+display:none;
+margin-top:10px;
 }
 
 form{
-max-width:500px;
+max-width:550px;
 margin:auto;
 display:flex;
 flex-direction:column;
@@ -160,34 +188,6 @@ border:none;
 cursor:pointer;
 }
 
-.review{
-display:none;
-max-width:700px;
-margin:auto;
-background:#fff;
-padding:20px;
-border-radius:10px;
-box-shadow:0 5px 20px rgba(0,0,0,.08);
-text-align:center;
-font-size:22px;
-}
-
-.review.active{
-display:block;
-}
-
-.faq-box{
-background:#fff;
-padding:15px;
-margin:10px 0;
-border-radius:8px;
-}
-
-.faq-box p{
-display:none;
-margin-top:10px;
-}
-
 .contact-links{
 max-width:450px;
 margin:auto;
@@ -203,6 +203,32 @@ text-decoration:none;
 color:#222;
 border-radius:8px;
 box-shadow:0 5px 20px rgba(0,0,0,.08);
+}
+
+.floating-whatsapp{
+position:fixed;
+bottom:20px;
+right:20px;
+background:#25d366;
+color:#fff;
+font-size:30px;
+padding:15px;
+border-radius:50%;
+z-index:999;
+text-decoration:none;
+}
+
+#topBtn{
+position:fixed;
+bottom:90px;
+right:20px;
+padding:10px 14px;
+border:none;
+border-radius:50%;
+background:#1b5e20;
+color:#fff;
+display:none;
+cursor:pointer;
 }
 
 footer{
